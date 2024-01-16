@@ -1,4 +1,3 @@
-#Requires -Modules VMware.PowerCLI
 <#
 .SYNOPSIS
     Updates all ESX hosts in a vCenter server.
@@ -18,6 +17,9 @@ param (
     [string]
     $vCenter
 )
+if (-not (Get-InstalledModule VMware.PowerCLI -ErrorAction SilentlyContinue)) {
+    Install-Module -Name VMware.PowerCLI -Scope CurrentUser
+}
 
 Import-Module -Name VMware.PowerCLI
 
