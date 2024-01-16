@@ -1,3 +1,4 @@
+#Requires -Modules VMware.PowerCLI
 <#
 .SYNOPSIS
     Updates all ESX hosts in a vCenter server.
