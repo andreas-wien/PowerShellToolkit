@@ -6,3 +6,4 @@ Invoke-WebRequest -Uri https://github.com/microsoft/microsoft-ui-xaml/releases/d
 Add-AppxPackage Microsoft.VCLibs.x64.14.00.Desktop.appx
 Add-AppxPackage Microsoft.UI.Xaml.2.8.x64.appx
 Add-AppxPackage Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle
+Get-ChildItem @("Microsoft.DesktopAppInstaller_8wekyb3d8bbwe.msixbundle","Microsoft.VCLibs.x64.14.00.Desktop.appx","Microsoft.UI.Xaml.2.8.x64.appx") | Remove-Item -Force
